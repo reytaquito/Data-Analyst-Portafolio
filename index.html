@@ -10,33 +10,37 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Custom theme overrides if needed */
+      @media (max-width: 600px) {
+    #navbar {
+      display: none;
+    }
+  }
   </style>
 </head>
 
 <body class="bg-white text-gray-800">
-  <div class="bg-[url('assets/layered-peaks-haikei.svg')] bg-top bg-cover bg-no-repeat ">
+  <div class="bg-[url('assets/layered-peaks-haikei.svg')] bg-top bg-cover md:h-1/2 h-full bg-no-repeat ">
     <header class="">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16 text-black">
-          <a href="#" class="text-2xl font-semibold">Rodrigo Mateos</a>
+          <a href="#" class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold">Rodrigo Mateos</a>
           <nav>
-            <ul class="flex space-x-6 text-black">
-              <li><a href="#about" class="hover:text-blue-600 font-bold">About</a></li>
-              <li><a href="#projects" class="hover:text-blue-600 font-bold">Projects</a></li>
-              <li><a href="#contact" class="hover:text-blue-600 font-bold">Contact</a></li>
+            <ul id='navbar' class="flex space-x-6 text-black">
+              <li><a href="#about" class="hover:text-white font-bold">About</a></li>
+              <li><a href="#projects" class="hover:text-white font-bold">Projects</a></li>
+              <li><a href="#contact" class="hover:text-white font-bold">Contact</a></li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
 
-    <section id="about" class="py-[200px] mb-8 px-4 md:px-8 overflow-hidden">
-      <div class="max-w-3xl ml-[150px] rounded-lg">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-black text-left">
+    <section id="about" class="pt-[33px] pb-[200px] md:pb-[150px] md:pt-[100px] lg:py-[200px] px-4 md:px-8 overflow-hidden md:flex md:items-start lg:justify-start">
+      <div class="max-w-3xl lg:ml-[150px] ml-0 rounded-lg">
+        <h1 class="text-base md:text-5xl font-bold mb-4 text-black text-left">
           Transforming Data into Actionable Insights
         </h1>
-        <p class="text-md md:text-xl text-black text-left">
+        <p class="text-sm md:text-xl text-black text-left">
           Data Analyst with front-end development background. Skilled in Python, SQL, Tableau, and Streamlit…
         </p>
       </div>
@@ -44,43 +48,41 @@
   </div>
 
   <!-- Projects Gallery -->
-  <main class="relative">
-    <section id="projects" class="py-16 bg-white">
+  <main class="relative mt-[-80px] md:mt-[-100px] lg:mt-[-80px] xl:mt-[80px]">
+    <section id="projects" class="pb-16 bg-white">
       <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-3xl font-semibold mb-8 text-center">My Projects</h2>
+        <h2 class="text-xl lg:text-2xl xl:text-3xl font-semibold mb-8 text-center">My Projects</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Project Card Template -->
           <div
             class="project-card flex flex-col justify-between h-full bg-gray-100 rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow transform hover:-translate-y-1 transition-transform duration-300 ease-in-out">
-            <a href="https://your-streamlit-app-link" target="_blank" class="block p-6">
-              <div class="aspect-[16/9] w-full mb-4 rounded-md bg-white flex items-center justify-center overflow-hidden">
-                <img src="assets/undraw_online-banking_l9sn.png" alt="Instacart Segmentation screenshot"
+            <a href="https://github.com/reytaquito/model-fitness-churn-analysis" target="_blank" class="block p-6">
+              <div
+                class="aspect-[16/9] w-full mb-4 rounded-md bg-white flex items-center justify-center overflow-hidden">
+                <img src="assets/undraw_instant-analysis_vm8x.png" alt="Instacart Segmentation screenshot"
                   class="object-contain w-full h-full" />
               </div>
 
-              <h3 class="text-2xl font-bold mb-2">Gym Customer Churn Analysis</h3> 
+              <h3 class="text-2xl font-bold mb-2">Gym Customer Churn Analysis</h3>
               <p class="text-gray-600 mb-4">Data‑driven strategy to predict gym member churn, profile segments,
                 identify key churn drivers, and recommend retention measures.</p>
               <p class="text-sm text-gray-500 mb-4">Tech: Python, Pandas, Scikit-learn</p>
-              
+
             </a>
             <div class="p-6 border-t border-gray-200 bg-white">
-              <button class="mt-auto inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
-                View App &rarr;
-              </button>
+              <a href="https://github.com/reytaquito/model-fitness-churn-analysis" target="_blank"
+                class="mt-auto inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
+                View Project &rarr;
+              </a>
             </div>
           </div>
-
-
-
-          <!-- Duplicate .project-card blocks for more projects -->
-
           <!-- Project Card Template -->
           <div
             class="project-card flex flex-col justify-between h-full bg-gray-100 rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow transform hover:-translate-y-1 transition-transform duration-300 ease-in-out">
-            <a href="assets/undraw_algorithm-execution_rksm.png" target="_blank" class="block p-6">
-              <div class="aspect-[16/9] w-full mb-4 rounded-md bg-white flex items-center justify-center overflow-hidden">
-                <img src="assets/undraw_organizing-data_uns9.png" alt="Instacart Segmentation screenshot"
+            <a href="https://github.com/reytaquito/telecom-operator-inefficiency-analysis" target="_blank" class="block p-6">
+              <div
+                class="aspect-[16/9] w-full mb-4 rounded-md bg-white flex items-center justify-center overflow-hidden">
+                <img src="assets/undraw_finance_m6vw.png" alt="Instacart Segmentation screenshot"
                   class="object-contain w-full h-full" />
               </div>
 
@@ -88,20 +90,22 @@
               <p class="text-gray-600 mb-4">Identifying inefficient call‑center operators via EDA, metrics and
                 statistical tests to improve service.</p>
               <p class="text-sm text-gray-500 mb-4">Tech: Python, Pandas, Statsmodels, Matplotlib, Seaborn</p>
-              
+
             </a>
             <div class="p-6 border-t border-gray-200 bg-white">
-              <button class="mt-auto inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
-                View App &rarr;
-              </button>
+              <a href="https://github.com/reytaquito/telecom-operator-inefficiency-analysis" target="_blank"
+                class="mt-auto inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
+                View Project &rarr;
+              </a>
             </div>
           </div>
           <!-- Project Card Template -->
           <div
             class="project-card flex flex-col justify-between h-full bg-gray-100 rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow transform hover:-translate-y-1 transition-transform duration-300 ease-in-out">
-            <a href="https://your-streamlit-app-link" target="_blank" class="block p-6">
-              <div class="aspect-[16/9] w-full mb-4 rounded-md bg-white flex items-center justify-center overflow-hidden">
-                <img src="assets/undraw_app-dark-mode_6ji2.png" alt="Instacart Segmentation screenshot"
+            <a href="https://github.com/reytaquito/foodapp-user-behavior-analysis" target="_blank" class="block p-6">
+              <div
+                class="aspect-[16/9] w-full mb-4 rounded-md bg-white flex items-center justify-center overflow-hidden">
+                <img src="assets/undraw_online-collaboration_xon8.svg" alt="Instacart Segmentation screenshot"
                   class="object-contain w-full h-full" />
               </div>
 
@@ -110,75 +114,155 @@
                 application.
               </p>
               <p class="text-sm text-gray-500 mb-4">Tech: Python, Pandas, Scipy, Matplotlib, Seaborn</p>
-              
+
             </a>
             <div class="p-6 border-t border-gray-200 bg-white">
-              <button class="mt-auto inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
-                View App &rarr;
-              </button> 
+              <a href="https://github.com/reytaquito/foodapp-user-behavior-analysis" target="_blank"
+                class="mt-auto inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
+                View Project &rarr;
               </a>
             </div>
           </div>
           <!-- Project Card Template -->
           <div
             class="project-card flex flex-col justify-between h-full bg-gray-100 rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow transform hover:-translate-y-1 transition-transform duration-300 ease-in-out">
-            <a href="https://your-streamlit-app-link" target="_blank" class="block p-6">
-              <div class="aspect-[16/9] w-full mb-4 rounded-md bg-white flex items-center justify-center overflow-hidden">
-                <img src="assets/undraw_data-reports_l2u3.png" alt="Instacart Segmentation screenshot"
+            <a href="https://github.com/reytaquito/bookservice-sql-analysis" target="_blank" class="block p-6">
+              <div
+                class="aspect-[16/9] w-full mb-4 rounded-md bg-white flex items-center justify-center overflow-hidden">
+                <img src="assets/undraw_environmental-study_jlft.png" alt="Instacart Segmentation screenshot"
+                  class="object-contain w-full h-full" />
+              </div>
+
+              <h3 class="text-2xl font-bold mb-2">Book Service SQL Analysis</h3>
+              <p class="text-gray-600 mb-4">Exploratory SQL analysis of a book app's database to uncover top authors,
+                publishers, and trends in ratings and reviews.</p>
+              <p class="text-sm text-gray-500 mb-4">Tech: Python, PostgreSQL, SQL</p>
+
+            </a>
+            <div class="p-6 border-t border-gray-200 bg-white">
+              <a href="https://github.com/reytaquito/bookservice-sql-analysis" target="_blank"
+                class="mt-auto inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
+                View Project &rarr;
+              </a>
+            </div>
+          </div>
+          <!-- Project Card Template -->
+          <div
+            class="project-card flex flex-col justify-between h-full bg-gray-100 rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow transform hover:-translate-y-1 transition-transform duration-300 ease-in-out">
+            <a href="https://public.tableau.com/app/profile/rodrigo.mateos/vizzes" target="_blank" class="block p-6">
+              <div
+                class="aspect-[16/9] w-full mb-4 rounded-md bg-white flex items-center justify-center overflow-hidden">
+                <img src="assets/undraw_real-time-analytics_50za.svg" alt="Instacart Segmentation screenshot"
+                  class="object-contain w-full h-full" />
+              </div>
+
+              <h3 class="text-2xl font-bold mb-2">Tableau Projects Portfolio</h3>
+              <p class="text-gray-600 mb-4"> Explore a collection of dashboards, data visualizations, and interactive
+                analytics projects built with Tableau Public.</p>
+              <p class="text-sm text-gray-500 mb-4">Tech: Tableu</p>
+
+            </a>
+            <div class="p-6 border-t border-gray-200 bg-white">
+              <a href="https://public.tableau.com/app/profile/rodrigo.mateos/vizzes" target="_blank"
+                class="mt-auto inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
+                Go To Tableau &rarr;
+              </a>
+            </div>
+          </div>
+          <!-- Project Card Template -->
+          <div
+            class="project-card flex flex-col justify-between h-full bg-gray-100 rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow transform hover:-translate-y-1 transition-transform duration-300 ease-in-out">
+            <a href="https://vehicle-sales.streamlit.app/" target="_blank" class="block p-6">
+              <div
+                class="aspect-[16/9] w-full mb-4 rounded-md bg-white flex items-center justify-center overflow-hidden">
+                <img src="assets/undraw_dashboard_p93p.png" alt="Instacart Segmentation screenshot"
+                  class="object-contain w-full h-full" />
+              </div>
+
+              <h3 class="text-2xl font-bold mb-2">Streamlit Dashboard </h3>
+              <p class="text-gray-600 mb-4">Interactive Streamlit dashboard to explore and analyze a dataset of used
+                vehicle listings. Includes filtering, plots, model comparisons, and insights on vehicle condition over
+                time.</p>
+              <p class="text-sm text-gray-500 mb-4">Tech: Python, Pandas, Plotly, Streamlit</p>
+
+            </a>
+            <div class="p-6 border-t border-gray-200 bg-white">
+              <a href="" target="_blank"
+                class="mt-auto inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
+                View App &rarr;
+              </a>
+            </div>
+          </div>
+          <!-- Project Card Template -->
+          <div
+            class="project-card flex flex-col justify-between h-full bg-gray-100 rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow transform hover:-translate-y-1 transition-transform duration-300 ease-in-out">
+            <a href="https://github.com/reytaquito/ecommerce-AB-test-analysis" target="_blank" class="block p-6">
+              <div
+                class="aspect-[16/9] w-full mb-4 rounded-md bg-white flex items-center justify-center overflow-hidden">
+                <img src="assets/undraw_elements_8i1l.svg" alt="Instacart Segmentation screenshot"
                   class="object-contain w-full h-full" />
               </div>
 
               <h3 class="text-2xl font-bold mb-2">E-commerce A/B Test Analysis</h3>
-              <p class="text-gray-600 mb-4">Full workflow from hypotheses prioritization to A/B test results and statistical inference for an online retailer..</p>
+              <p class="text-gray-600 mb-4">Full workflow from hypotheses prioritization to A/B test results and
+                statistical inference for an online retailer..</p>
               <p class="text-sm text-gray-500 mb-4">Tech: Python, Pandas, Scipy, Matplotlib, Seaborn</p>
-              
+
             </a>
             <div class="p-6 border-t border-gray-200 bg-white">
-              <button class="mt-auto inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
-                View App &rarr;
-              </button>
+              <a href="https://github.com/reytaquito/ecommerce-AB-test-analysis" target="_blank"
+                class="mt-auto inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
+                View Project &rarr;
+              </a>
             </div>
           </div>
           <!-- Project Card Template -->
           <div
             class="project-card flex flex-col justify-between h-full bg-gray-100 rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow transform hover:-translate-y-1 transition-transform duration-300 ease-in-out">
-            <a href="https://your-streamlit-app-link" target="_blank" class="block p-6">
-              <div class="aspect-[16/9] w-full mb-4 rounded-md bg-white flex items-center justify-center overflow-hidden">
-                <img src="assets/undraw_financial-data_lbci.png" alt="Instacart Segmentation screenshot"
+            <a href="https://github.com/reytaquito/marketing-analytics" target="_blank" class="block p-6">
+              <div
+                class="aspect-[16/9] w-full mb-4 rounded-md bg-white flex items-center justify-center overflow-hidden">
+                <img src="assets/undraw_report_k55w.png" alt="Instacart Segmentation screenshot"
                   class="object-contain w-full h-full" />
               </div>
 
               <h3 class="text-2xl font-bold mb-2">Marketing Analytics for Showz</h3>
-              <p class="text-gray-600 mb-4">Analyze user engagement, conversion, and marketing ROI to optimize spend using LTV and CAC insights.</p>
+              <p class="text-gray-600 mb-4">Analyze user engagement, conversion, and marketing ROI to optimize spend
+                using LTV and CAC insights.</p>
               <p class="text-sm text-gray-500 mb-4">Tech: Python, Pandas, Matplotlib</p>
-              
+
             </a>
             <div class="p-6 border-t border-gray-200 bg-white">
-              <button class="mt-auto inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
-                View App &rarr;
-              </button>
+              <a href="https://github.com/reytaquito/marketing-analytics" target="_blank"
+                class="mt-auto inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
+                View Project &rarr;
+              </a>
             </div>
           </div>
           <!-- Project Card Template -->
           <div
             class="project-card flex flex-col justify-between h-full bg-gray-100 rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow transform hover:-translate-y-1 transition-transform duration-300 ease-in-out">
-            <a href="https://your-streamlit-app-link" target="_blank" class="block p-6">
-              <div class="aspect-[16/9] w-full mb-4 rounded-md bg-white flex items-center justify-center overflow-hidden">
-                <img src="assets/undraw_finance_m6vw.png" alt="Instacart Segmentation screenshot"
+            <a href="https://github.com/reytaquito/megaline-tariff-analysis" target="_blank" class="block p-6">
+              <div
+                class="aspect-[16/9] w-full mb-4 rounded-md bg-white flex items-center justify-center overflow-hidden">
+                <img src="assets/undraw_financial-data_lbci.png" alt="Instacart Segmentation screenshot"
                   class="object-contain w-full h-full" />
               </div>
 
               <h3 class="text-2xl font-bold mb-2">Megaline Tariff Revenue Analysis</h3>
-              <p class="text-gray-600 mb-4">Data exploration and hypothesis testing to determine which prepaid plan (Surf or Ultimate) is more profitable for a telecom provider.</p>
+              <p class="text-gray-600 mb-4">Data exploration and hypothesis testing to determine which prepaid plan
+                (Surf or Ultimate) is more profitable for a telecom provider.</p>
               <p class="text-sm text-gray-500 mb-4">Tech: Python, Pandas, Scipy, Matplotlib, Seaborn</p>
-              
+
             </a>
             <div class="p-6 border-t border-gray-200 bg-white">
-              <button class="mt-auto inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
-                View App &rarr;
-              </button>
+              <a href="https://github.com/reytaquito/megaline-tariff-analysis" target="_blank"
+                class="mt-auto inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
+                View Project &rarr;
+              </a>
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -200,9 +284,11 @@
           <span
             class="bg-yellow-100 text-yellow-800 py-2 px-4 rounded-full transform hover:-translate-y-1 transition-transform duration-300 ease-in-out">Streamlit</span>
           <span
-            class="bg-indigo-100 text-indigo-800 py-2 px-4 rounded-full transform hover:-translate-y-1 transition-transform duration-300 ease-in-out">JavaScript</span>
+            class="bg-indigo-100 text-indigo-800 py-2 px-4 rounded-full transform hover:-translate-y-1 transition-transform duration-300 ease-in-out">Git</span>
           <span
-            class="bg-teal-100 text-teal-800 py-2 px-4 rounded-full transform hover:-translate-y-1 transition-transform duration-300 ease-in-out">TailwindCss</span>
+            class="bg-teal-100 text-teal-800 py-2 px-4 rounded-full transform hover:-translate-y-1 transition-transform duration-300 ease-in-out">Excel</span>
+          <span
+            class="bg-purple-100 text-purple-800 py-2 px-4 rounded-full transform hover:-translate-y-1 transition-transform duration-300 ease-in-out">Pandas</span>
           <!-- Add more skill badges here -->
         </div>
       </div>
@@ -213,10 +299,45 @@
       <div class="max-w-3xl mx-auto text-center px-4">
         <h2 class="text-3xl font-semibold mb-4">Get in Touch</h2>
         <p class="text-gray-600 mb-8">I’m currently open to Data Analyst opportunities. Let’s connect!</p>
+        <!-- Lista de redes -->
+        <ul class="flex justify-center space-x-6 pb-8">
+          <!-- LinkedIn -->
+          <li>
+            <a href="https://www.linkedin.com/in/tu-usuario" target="_blank"
+              class="flex items-center space-x-2 text-gray-700 hover:text-blue-600">
+              <!-- Heroicon: linkedin (puedes descargar SVG o usar font-awesome) -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M4.98 3.5C4.98 4.6 4.1 5.5 2.98 5.5S1 4.6 1 3.5 1.9 1.5 3 1.5s1.98.9 1.98 2zm.02 4.5H.06V24h5V8H5zM8.59 8H13v2.16h.07c.62-1.18 2.14-2.16 4.41-2.16C23.13 8 24 12.3 24 17.37V24h-5v-6.98c0-1.67-.03-3.81-2.32-3.81-2.33 0-2.69 1.82-2.69 3.7V24h-5V8z" />
+              </svg>
+              <span class="text-lg font-medium">LinkedIn</span>
+            </a>
+          </li>
+
+          <!-- GitHub -->
+          <li>
+            <a href="https://github.com/reytaquito" target="_blank"
+              class="flex items-center space-x-2 text-gray-700 hover:text-red-900">
+              <!-- Heroicon: github -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0C5.37 0 0 5.4 0 12.07c0 5.34 3.438 9.87 8.205 11.48.6.113.82-.26.82-.58
+                     0-.29-.01-1.04-.015-2.04-3.338.72-4.042-1.64-4.042-1.64-.546-1.4-1.333-1.77-1.333-1.77-1.09-.75.083-.74.083-.74
+                     1.205.086 1.84 1.25 1.84 1.25 1.07 1.85 2.807 1.31 3.492 1 .108-.78.42-1.31.763-1.61-2.665-.3-5.467-1.37-5.467-6.08
+                     0-1.34.465-2.44 1.235-3.3-.125-.3-.535-1.52.115-3.17 0 0 1.005-.32 3.29 1.26a11.47 11.47 0 013.005-.4c1.02.005 2.046.14 3.005.4
+                     2.28-1.58 3.285-1.26 3.285-1.26.655 1.65.245 2.87.12 3.17.77.86 1.235 1.96 1.235 3.3
+                     0 4.72-2.805 5.775-5.475 6.075.43.37.815 1.1.815 2.22 0 1.6-.015 2.89-.015 3.28
+                     0 .32.21.7.825.58C20.565 21.93 24 17.405 24 12.07 24 5.4 18.627 0 12 0z" />
+              </svg>
+              <span class="text-lg font-medium">GitHub</span>
+            </a>
+          </li>
+        </ul>
         <a href="mailto:romateosg@gmail.com"
-          class="inline-block bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700">
+          class="inline-block bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 mb-8">
           Email Me
         </a>
+
+
       </div>
     </section>
   </main>
